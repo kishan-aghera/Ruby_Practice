@@ -1,0 +1,18 @@
+1.
+ 1. program will guess any number from 1 to 30.
+ 2. program will ask user to guess the number (max attempts are 5).
+ 3. if number is 5 steps nearer to the guessed number you need to print "You are too close!"
+ 4. if not print "please try again!"
+ 5. if user perfectly guess the number print "congrats you won!"
+ 6. if 5 attempts are over then print "You lose!"
+
+2.
+ Length.
+ First character.
+ Last character. 
+ Middle character, if the string has an odd number of characters. Middle TWO characters, if the string has an even number of characters.
+ e.g
+  "Apple"= p, "Apples" = "pl"
+ Index of the second occurrence of the second character in the format "@ index #" and "not found" if the second character doesn't occur again.
+ e.g 
+ "Apple".find("p")= > p index 2
