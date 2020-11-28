@@ -11,17 +11,16 @@ def get_last_character(str)
 end
 
 def get_middle_character(str)
-  l = length_of_string(str)
-  if l % 2 != 0
-    return str[l]
+  if str.length.even?
+      return str[str.length/2-1] + str[str.length/2]
   else
-    return "#{str[l]}#{str[l+1]}"
+      return str[str.length/2]
   end
 end
 
 p "Enter a string"
 s = gets
-length_of_string(s)
-get_first_character(s)
-get_last_character(s)
-get_middle_character(s)
+p length_of_string(s)
+p get_first_character(s)
+p get_last_character(s)
+p get_middle_character(s)
