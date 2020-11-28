@@ -18,9 +18,29 @@ def get_middle_character(str)
   end
 end
 
+def get_second_occurrence(str, c)
+  occur = 0
+    # Loop to find the Nth
+    # occurence of the character
+  i = 0
+  while i < str.length do
+    if str[i] == c
+      occur = occur + 1
+    end
+    if occur == 2
+      return i
+    end
+    i = i + 1
+  end
+  return -1
+end
+
 p "Enter a string"
 s = gets
 p length_of_string(s)
 p get_first_character(s)
 p get_last_character(s)
 p get_middle_character(s)
+p "Enter character whose second occurrence you want to find"
+char = gets
+p get_second_occurrence(s, char)
