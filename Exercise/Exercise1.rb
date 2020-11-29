@@ -10,8 +10,8 @@ while attempts < 6
   end
   if (n - r).abs <= 5
     puts "You are too close!"
-  else
-    puts "You are far"
+  # else
+  #   puts "You are far"
   end
   attempts = attempts + 1
 end

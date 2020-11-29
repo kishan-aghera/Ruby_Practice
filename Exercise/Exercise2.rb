@@ -28,11 +28,11 @@ def get_second_occurrence(str, c)
       occur = occur + 1
     end
     if occur == 2
-      return i
+      return "#{c} index #{i}"
     end
     i = i + 1
   end
-  return -1
+  return "Not Found"
 end
 
 p "Enter a string"
