@@ -20,8 +20,6 @@ end
 
 def get_second_occurrence(str, c)
   occur = 0
-    # Loop to find the Nth
-    # occurence of the character
   i = 0
   while i < str.length do
     if str[i] == c
@@ -36,7 +34,7 @@ def get_second_occurrence(str, c)
 end
 
 p "Enter a string"
-s = gets
+# s = gets Have to figure out this line.
 p length_of_string(s)
 p get_first_character(s)
 p get_last_character(s)
