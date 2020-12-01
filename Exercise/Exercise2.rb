@@ -40,5 +40,5 @@ p get_first_character(s)
 p get_last_character(s)
 p get_middle_character(s)
 p "Enter character whose second occurrence you want to find"
-char = gets
+char = gets.chomp
 p get_second_occurrence(s, char)
