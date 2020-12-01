@@ -1,7 +1,6 @@
 p "Guess a number"
 n = gets.chomp.to_i # program will ask user to guess the number
 r = rand 1..30 # program will guess any number from 1 to 30
-# p r
 attempts = 0
 while attempts < 6 # max attempts are 5
   if n == r # if user perfectly guess the number, we have to print "congrats you won!"
