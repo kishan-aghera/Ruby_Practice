@@ -1,5 +1,5 @@
 p "Guess a number"
-n = gets # program will ask user to guess the number
+n = gets.chomp.to_i # program will ask user to guess the number
 r = rand 1..30 # program will guess any number from 1 to 30
 # p r
 attempts = 0
