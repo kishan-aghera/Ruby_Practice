@@ -34,7 +34,7 @@ def get_second_occurrence(str, c) #  Index of the second occurrence of the secon
 end
 
 p "Enter a string"
-# s = gets # Have to figure out this line
+s = gets.chomp
 p length_of_string(s)
 p get_first_character(s)
 p get_last_character(s)
