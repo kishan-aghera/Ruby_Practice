@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_20_143457) do
+ActiveRecord::Schema.define(version: 2020_12_21_112153) do
 
   create_table "friends", force: :cascade do |t|
     t.string "first_name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_12_20_143457) do
     t.string "instagram"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_friends_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
