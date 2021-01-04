@@ -5,20 +5,20 @@ class ABC
 		@num = num
 	end
 
-	def +(obj)
-		return @num+obj
+	def +(other)
+		return @num + other
 	end
 
-	def *(obj)
-		return @num*obj
+	def *(other)
+		return @num * other
 	end
 
-  def **(obj)
-		return @num**obj
+  def **(other)
+		return @num ** other
 	end
 end
 
-a=ABC.new(5)
-puts a + 3
-puts a * 3
-puts a ** 3
+a = ABC.new(9)
+puts a + 5
+puts a * 5
+puts a ** 5
