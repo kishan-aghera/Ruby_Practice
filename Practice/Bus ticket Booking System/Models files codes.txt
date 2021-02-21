@@ -1,0 +1,29 @@
+rails g model Busport
+
+class Busport < ApplicationRecord
+  has_many :departing_buses, class_name: "Bus", foreign_key: "from_busport_id" 
+  has_many :arriving_buses,  class_name: "Bus", foreign_key: "to_busport_id"
+end
+------------------------------------------------------------------------------------------
+rails g model Booking
+
+class Booking < ApplicationRecord
+  belongs_to :bus
+  has_many :passengers
+  accepts_nested_attributes_for :passengers
+end
+------------------------------------------------------------------------------------------
+rails g model Bus
+
+class Bus < ApplicationRecord
+  belongs_to :from_busport, class_name: "Busport", foreign_key: "from_busport_id"
+  belongs_to :to_busport, class_name: "Busport", foreign_key: "to_busport_id"
+  has_many :bookings
+  has_many :passengers, through: :bookings
+end
+------------------------------------------------------------------------------------------
+rails g model Passenger
+
+class Passenger < ApplicationRecord
+  belongs_to :booking
+end

@@ -1,0 +1,14 @@
+rails g migration CreateBusports code:string
+
+rails g migration CreateBuses from_busport_id:integer to_busport_id:integer duration:integer scheduled-_on:datetime
+
+rails g migration CreateBookings
+
+rails g migration CreatePassengers name:string email:phone
+
+rails g migration AddBusRefToBookings bus:references
+    add_reference :bookings, :bus, foreign_key: true
+
+rails g migration AddBookingRefToPassengers booking:references
+    add_reference :passengers, :booking, foreign_key: true
+

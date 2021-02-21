@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to root_path class:"navbar-brand" %>Bus Ticket Booking System
+  </div>
+</nav>
+
+<div class="column is-half has-text-left">
+    <%= render "search_form" %>
+</div>
+

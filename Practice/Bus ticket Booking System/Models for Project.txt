@@ -1,0 +1,31 @@
+Airports has many departing flights, class name: Flight, foreign key: from_airport_id
+-Busports has many departing buses, class name: Bus, foreign key: from_busport_id
+
+Airports has many arriving flights, class name: Flight, foreign key: to_airport_id
+-Busports has many arriving buses, class name: Bus, foreign key: to_busport_id
+--------------------------------------------------------------------------------------------
+Booking belongs to flight
+-Booking belongs to bus
+
+Booking has many passengers
+-Booking has many passengers
+
+Booking accepts nested attributes for passengers
+-Booking accepts nested attributes for passengers
+--------------------------------------------------------------------------------------------
+Flight belongs to from_airport, class name: Airport, foreign key: from_airport_id
+-Bus belongs to from_busport, class name: Busport, foreign key: to_busport_id
+
+Flight belongs to to_airport, class name: Airport, foreign key: to_airport_id
+-Bus belongs to to_busport, class name: Busport, foreign key: to_busport_id
+
+Flight has many bookings
+-Bus has many bookings
+
+Flight has many passengers, through bookings
+-Bus has many passengers, through bookings
+--------------------------------------------------------------------------------------------
+Passenger belongs to booking
+-Passenger belongs to booking
+--------------------------------------------------------------------------------------------
+
